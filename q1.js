@@ -59,5 +59,5 @@ function parseUserName(UserName){
 // Make the height of the bars more visible. The frequencies themselves are very small for only 5 usernames
 
 function displayHeight(originalHeight){
-  return originalHeight*30 + "px";
+  return originalHeight*20 + "px";
 }
