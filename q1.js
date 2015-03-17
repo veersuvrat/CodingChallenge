@@ -1,14 +1,17 @@
-// initially set up all frequencies = 0
+
 var frequencies = [];
-for (var i = 0; i < 27; i++) {
-  frequencies[i] = 0;
-}
+// initially set up all frequencies = 0
+  for (var i = 0; i < 27; i++) {
+    frequencies[i] = 0;
+  }
+
 d3.select("body").selectAll("div").data(frequencies).enter().append("div").attr("class", "bar").style("height", displayHeight);
 
 
 
 
 function SearchUsingInput(){
+  
   var searchBox = document.getElementById("SearchForm");
   
   console.log("Just testing things out.");
@@ -31,6 +34,12 @@ function SearchUsingInput(){
   
 
   d3.selectAll(".bar").data(frequencies).style("height", displayHeight);
+
+  //reset frequencies after search complete and bar chart displayed.
+  for (var i = 0; i < 27; i++) {
+    frequencies[i] = 0;
+  }
+
 
 }
 
